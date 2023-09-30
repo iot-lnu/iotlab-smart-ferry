@@ -1,0 +1,7 @@
+yggio_account:
+  server: https://beta.yggio.net/api
+  username: FILL-IN
+  password: FILL-IN
+basic_credential_set:
+  username_base: FILL-IN
+  password_base: FILL-IN
