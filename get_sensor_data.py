@@ -36,12 +36,15 @@ password = config["yggio_account"]["password"]
 # It is possible to get this info through the API by I find it useful to first check if a specific 
 # measurement actually contains data
 
-series=[#{"_id": "645ba89bce62983a5d9c4267", "measurement": "vibrationLevel"}, #vibration machine room
-        #{"_id": "645902a0d2407e1f6db348b3", "measurement": "temperature"},  #weather station
-        #{"_id": "645b989543c7d8da134bce8c", "measurement": "humidityRelative"},   # humidity cafe particle sensor
-        #{"_id": "6455008f40e77ffc26553b25", "measurement": "noiseLevelAverage"},   # cafe noise level sensor
+series=[{"_id": "645ba89bce62983a5d9c4267", "measurement": "vibrationLevel"}, #vibration machine room
+        {"_id": "645902a0d2407e1f6db348b3", "measurement": "temperature"},  #weather station
+        {"_id": "645b989543c7d8da134bce8c", "measurement": "humidityRelative"},   # humidity cafe particle sensor
+        {"_id": "6455008f40e77ffc26553b25", "measurement": "noiseLevelAverage"},   # cafe noise level sensor
        {"_id": "64efb2383c5bd2832951016b", "measurement": "longitude"}, # gps sensor
-       {"_id": "64efb2383c5bd2832951016b", "measurement": "latitude"} # gps sensor
+       {"_id": "64efb2383c5bd2832951016b", "measurement": "latitude"}, # gps sensor
+        {"_id": "6492b84a7c8782b4ee04bcff", "measurement": "motion"}, #motion in the cafe
+        {"_id": "6492b84a7c8782b4ee04bcff", "measurement": "temperature"}, #temperature in the cafe
+        {"_id": "6492b84a7c8782b4ee04bcff", "measurement": "relativeHumidity"} #humidity in the cafe
         ]
 
 ###########################################################################################
