@@ -60,6 +60,23 @@ my_session.headers.update(my_headers)
 starttime = 0
 endtime = int(round(time.time() * 1000))
 
+df = yggio_API.get_all_node_ids(server, username, password, my_session)
+print(df._id)
+
+for node_id in df._id:
+    node_fields = yggio_API.get_node_fields(server, username, password, my_session, node_id)
+    print(node_fields)
+    #Load
+    df = yggio_API.collectOneNodeAllFieldsAllTime(node_id, node_fields, server, username, password, my_session)
+    
+    #Save to csv
+    four_last_char_in_id = node_id[len(node_id)-4:len(node_id)]
+    if df is not None: 
+        df.to_csv('/Users/oxana/projects/iotlab-smart-ferry/ms-dessi-data/data_all_' + four_last_char_in_id +'.csv')
+
+""""
+
+
 #Load data and save to separate csv-files
 for idx in range(len(series)):
     
@@ -72,3 +89,4 @@ for idx in range(len(series)):
     
     #Save to csv
     df.to_csv('data_' + series[idx]['measurement'] + '_' + four_last_char_in_id +'.csv')
+"""
